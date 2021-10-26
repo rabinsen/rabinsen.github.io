@@ -1,0 +1,43 @@
+body{
+    background-color: #ff7e06;
+    font-size: 15px;
+    font-family: 'Trebuchet', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+
+#header{
+    text-align: center;
+    background-color: beige;
+    height: max-content;
+}
+
+span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+h3{
+    color: #bddaaf;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+span > strong {
+    font-size: 10px;
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+strong{
+    color: rgb(12, 57, 206);
+}
