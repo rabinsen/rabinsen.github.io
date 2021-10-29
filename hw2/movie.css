@@ -1,0 +1,131 @@
+/* Name: Rabin Senchuri */
+/* Assignment: Movie Review CSS File */
+body {
+  background-image: url(images/background.png);
+}
+
+#banner {
+  padding-left: 5cm;
+  padding-right: 5cm;
+  width: 10cm;
+  margin-top: -10px;
+  height: 50px;
+}
+
+#bannerBack {
+  margin-top: -50px;
+  background-image: url(images/bannerbg.png);
+  background-repeat: repeat-x;
+  height: 50px;
+}
+
+#title {
+  font-family: Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 24pt;
+  text-align: center;
+}
+
+#mainBorder {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 800px;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header  header header header menu"
+    "main  main right right menu"
+    "footer  footer footer footer footer";
+  border-style: solid;
+  border-color: gray;
+  border-width: 4px;
+  border-radius: 20px;
+}
+
+.container > div {
+  text-align: left;
+  font-size: 48px;
+  display: inline;
+}
+
+.itemLeft {
+  grid-area: header;
+  background-image: url(images/rbg.png);
+  background-repeat: repeat-x;
+  font-weight: bold;
+  color: red;
+  width: 550px;
+}
+
+.itemRight {
+  grid-area: menu;
+  background-color: #a2b964;
+  width: 242px;
+}
+
+#rightImage {
+  width: 6.4cm;
+}
+
+.textMenu {
+  font-size: 8pt;
+  display: inline-block;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  margin-left: 10pt;
+  line-height: 10pt;
+}
+
+.clearbreak {
+  clear: left;
+}
+
+.reviewsLeft {
+  grid-area: main;
+}
+
+.textSize {
+  font-size: 8pt;
+  font-weight: bold;
+  margin-top: -40px;
+}
+
+.reviews {
+  background-color: #e8dc9b;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.reviewer {
+  font-style: italic;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.reviewsRight {
+  grid-area: right;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #a2b964;
+}
+
+.textfooter {
+  text-align: center;
+  font-size: 10pt;
+}
+
+.formater {
+  text-align: right;
+  opacity: 50%;
+}
+ul {
+  list-style-type: none;
+}
