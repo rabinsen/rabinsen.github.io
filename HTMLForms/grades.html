@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retrieve Grade</title>
+  </head>
+  <body>
+    <div style="border: 5px solid gray; padding:20px; width: 800px; margin: auto;">
+        <h2 style="text-align: center;">Grade Evaluation</h2>
+        <form action="http://mumstudents.org/params.php" method="get">
+            <label>Student Name <input type="text" name="name" /></label>
+            <label>Student id<input type="text" name="id" /></label> <br>
+      
+            <label>Assignment Number:</label>
+            <select name="assignment">
+                <option value="lab1">Lab1</option>
+                <option value="lab2">Lab2</option>
+                <option value="lab3">Lab3</option>
+                <option value="lab4">Lab4</option>
+                <option value="lab5">Lab5</option>
+            </select>
+      
+            <fieldset>
+              <legend>Student Entry:</legend>
+              <input type="radio" name="entry" value="may"> May
+              <input type="radio" name="entry" value="august"> August
+              <input type="radio" name="entry" value="november"> November
+              <input type="radio" name="entry" value="february"> February
+            </fieldset>
+      
+            <fieldset>
+              <legend>Check that are appropriate</legend>
+              <input type="checkbox" name="lying"> Lying
+              <input type="checkbox" name="notLying"> Not Lying
+              <input type="checkbox" name="yourInfo"> Your Information
+              <input type="checkbox" name="othersInfo"> Others Information
+            </fieldset>
+      
+            <input type="submit">
+          </form>
+    </div>
+    <div style="text-align: right;">
+        <a
+        href="https://validator.w3.org/nu/?doc=https://rabinsen.github.io/forms/lab"
+        ><img src="images/w3c-html.png" alt="Valid HTML5"
+      /></a>
+    </div>
+  </body>
+</html>
