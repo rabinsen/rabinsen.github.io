@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>HTML Forms Lab</title>
 </head>
 <body>
-    
+
+        <form action="http://mumstudents.org/params.php" method="get">
+            <div id="outerBoarder">
+                <h4 id="header">New User Signup:</h4> <br>
+                <div class="content">
+                    <label> Name: </label> <br>
+                    <label> Gender:  <input type="radio" name="male">Male
+                        <input type="radio" name="male" checked>Female </label> <br>
+                    <label> Age: <input type="text" name="age" maxlength="2" size="6"></label> <br>
+                    <label> Personality type: <input type="text" name="personality" size="6" maxlength="4"><a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp">  (Don't know your type?)</a></label> <br>
+                    <label> Favorite OS: <select name="favOs">
+                        <option value="windows">Windows</option>
+                        <option value="linux">Mac OS X</option>
+                        <option value="linux">Linux</option>
+                    </select></label> <br>
+                    <label> Seeking age: <input type="text" name="min" placeholder="min" size="6" maxlength="2">to <input type="text" name="max" placeholder="max" size="6" maxlength="2"></label><br>
+                    <input type="submit" value="SignUp" style="background-color: pink; width: 100px;">
+                </div>
+                
+        </div>
+        </form>
+    </div>
 </body>
 </html>
