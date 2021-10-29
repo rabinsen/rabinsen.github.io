@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script>
+    function calcTip() {
+      const subTotal = parseInt(document.getElementById("subtotal").value);
+      const tips = parseInt(document.getElementById("tip").value);
+      const total = (tips / 100) * subTotal + subTotal;
+      console.log(total);
+      document.getElementById("total").innerHTML = "$" + total;
+    }
+  </script>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +18,7 @@
   </head>
   <body>
     <h1>
-      <img id="logo" src="calc.jpg" alt="++--**//" />
+      <img id="logo" src="images/calc.jpg" alt="++--**//" />
       Tip Calculator
     </h1>
 
@@ -32,14 +41,4 @@
       <p id="total">$0.00</p>
     </div>
   </body>
-  <script>
-    function calcTip() {
-        const subTotal = parseInt(document.getElementById("subtotal").value);
-        const tips = parseInt(document.getElementById("tip").value);
-        const total = tips/ 100 * subTotal + subTotal;
-        console.log(total);
-        document.getElementById("total").innerHTML = "$" + total;
-        
-    }
-  </script>
 </html>
