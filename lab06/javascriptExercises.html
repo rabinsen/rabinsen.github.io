@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="logic.js"></script>
+  </head>
+  <body>
+    <h3>1. What is the difference between the following 2 statements?</h3>
+    <p style="font-style: italic">
+      setTimeout(booyah, 2000); </p>
+      <p>Ans: In this the booyah function is called after 2 seconds</p>
+     <p style="font-style: italic;">setTimeout(booyah(), 2000);</p>
+     <p>Ans: In this the booyah function is called instantly without waiting for 2 seconds.</p>
+
+    
+
+    <h3>
+      2. What do the following 2 alerts display (answer without running the
+      code)?
+    </h3>
+    <p style="font-style: italic">
+      var myfunc = function(a, x) { <br />
+      return a * x; <br />
+      }; <br />
+      var x = myfunc(2, 3); <br />
+      var y = myfunc; <br />
+      alert(x); <br />
+      alert(y(2,3));
+    </p>
+    <br />
+    <p>Ans: On both alert display, 6 is displayed.</p>
+
+    <h3>
+      3. Write functions booyah1 and booyah2 so that in both cases below, an
+      alert box comes up after 2 seconds that says “BOOYAH!”
+    </h3>
+    <p style="font-style: italic;">setTimeout(booyah1, 2000);</p>
+    <div>
+        <p> Ans: <br> 
+            <button id="alert1">Show Alert....</button>
+             <p id="showAlert1"> Ans: Click above to see alert </p>
+        </p>
+    </div>
+
+    <p style="font-style: italic;">setTimeout(booyah2(), 2000);</p>
+    <div>
+        <p> Ans: <br> 
+            <button id="alert2">Show Alert....</button>
+             <p id="showAlert2"> Ans: Click above to see alert </p>
+        </p>
+    </div>
+
+    <div>
+        <h3>4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons for using it)?</h3>
+        <p>Ans: Unobtrusive Javascript is the way of writing Javascript code in which we properly separate Document Content and Script Content <br>
+        and thus allowing us to make a clear distinction between them. The reasons for using it are: it separates the  website <br>
+    into 3 major categories: content(HTML), presentation(CSS) and behavior(JavaScript) and make code clean. Also it allows us to work on JavaScript <br> without touching either HTML or CSS. Thus, it makes out code less error prone,
+ easy to update and to debug.</p>
+    </div>
+  </body>
+</html>
