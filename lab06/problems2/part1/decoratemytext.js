@@ -43,6 +43,8 @@ window.onload = function () {
             text.style.fontWeight = "normal";
             text.style.color = "black";
             text.style.textDecoration = "none";
+            var background = document.getElementById("background");
+            background.style.backgroundImage = "none";
         }
     }
 
