@@ -29,7 +29,7 @@ textarea {
 }
 
 .menuHead {
-  width: 40%;
+  width: 85%;
   margin: auto;
 }
 
@@ -38,6 +38,7 @@ textarea {
   display: inline;
   border: 3px solid black;
   padding: 8px;
-  border-top: hidden;
+  
   margin-left: 5px;
 }
+
