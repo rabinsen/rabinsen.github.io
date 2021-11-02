@@ -18,7 +18,9 @@ window.onload = function(){
     }
 
     function booyah2(){
-        alert("BOOYAH!");
+        return function(){
+            alert("BOOYAH!");
+        }
     }
 }
 
