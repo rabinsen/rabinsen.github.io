@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <link rel="stylesheet" href="ascii.css" />
+    <script src="ascii.js"></script>
+    <script src="animations.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <p>CS472: ASCII Animation Viewer</p>
+      </div>
+      <div class="textbox">
+        <textarea name="animArea" id="textArea" cols="80" rows="20"></textarea>
+      </div>
+      <div class="menuHead">
+        <ul id="menu">
+          <li>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+          </li>
+
+          <li>
+            <select name="animation" id="anim">
+              <option value="Blank" selected>Blank</option>
+              <option value="Exercise">Exercise</option>
+              <option value="Juggler">Juggler</option>
+              <option value="Bike">Bike</option>
+              <option value="Dive">Dive</option>
+              <option value="Custom">Custom</option>
+            </select>
+          </li>
+
+          <li>
+            <select name="fontSize" id="size">
+              <option value="7pt">Tiny</option>
+              <option value="10pt">Small</option>
+              <option value="12pt" selected>Medium</option>
+              <option value="16pt">Large</option>
+              <option value="24pt">Extra Large</option>
+              <option value="32pt">XXL</option>
+            </select>
+          </li>
+
+          <li><input type="checkbox" id="turbo" />Turbo</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <a
+        href="https://validator.w3.org/nu/?doc=https://rabinsen.github.io/lab05/tipsCalculator.html"
+        ><img src="images/w3c-html.png" alt="Valid HTML5"
+      /></a>
+      <br />
+      <a
+        href="https://jigsaw.w3.org/css-validator/validator?uri=https://rabinsen.github.io/lab05/tip.css"
+        ><img src="images/w3c-css.png" alt="Valid CSS"
+      /></a>
+    </div>
+  </body>
+</html>
