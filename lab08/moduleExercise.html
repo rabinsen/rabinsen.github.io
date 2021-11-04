@@ -150,13 +150,15 @@
     <dd>
         <p>Ans:</p>
         <pre>
-            var make_adder = function(inc) {
-                var add = (function() {
-                  var counter = 0;
-                  return function() {
-                    return counter += inc;
-                  };
-                })();
+          var make_adder = function(inc) {
+            return (function() {
+              var counter = 0;
+              return function() {
+                return counter += inc;
+              };
+              
+            })();
+        }
         </pre>
     </dd>
     <dt>
