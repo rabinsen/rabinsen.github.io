@@ -1,34 +1,12 @@
 "use strict";
 
-/* window.onload = function(){
-    var element = document.getElementById("decorate");
-    element.onclick = function(){
-        var text = document.getElementById("textbox").value;
-        document.getElementById("output").innerHTML = text;
-        var temp = document.getElementById("output");
-        temp.style.color = "red";
-        temp.style.fontSize = 40 + "px"; 
 
-    }
-} */
-/* alert("Hello World"); */
 window.onload = function () {
     var element = document.getElementById("bigDecoration");
-    
-    element.onclick = function(){
+
+    element.onclick = function () {
         setInterval(increaseTextSize, 500);
     }
-
-
-    /* alert("Hello World"); */
-    /* var text = document.getElementById("textbox"); */
-    /* text.style.fontSize = 24 + "pt"; */
-    /*  var textsize = (text.style.fontSize);
-     console.log(textsize); */
-    /* textsize += 2;
-   
-    text.style.fontSize = textsize + "pt";*/
-
     var check = document.getElementById("checkbling");
     check.onchange = function () {
         var text = document.getElementById("text");
@@ -49,15 +27,15 @@ window.onload = function () {
     }
 
     var button2 = document.getElementById("igpay");
-    button2.onclick = function(){
+    button2.onclick = function () {
         var text = document.getElementById("text").value;
-        for(var i=0; i<text.length;){
-            if(! isVowel(text[i].toLowerCase())){
+        for (var i = 0; i < text.length;) {
+            if (!isVowel(text[i].toLowerCase())) {
                 text += text[i];
-                
+
                 text = text.substring(1);
-               
-            }else{
+
+            } else {
                 text += "ay";
                 break;
             }
@@ -66,10 +44,10 @@ window.onload = function () {
     }
 
     var button3 = document.getElementById("malkovitch");
-    button3.onclick = function(){
+    button3.onclick = function () {
         var text = document.getElementById("text").value;
 
-        if(text.length >= 5){
+        if (text.length >= 5) {
             text = "Malkovich";
         }
 
@@ -84,8 +62,8 @@ function increaseTextSize() {
     text.style.fontSize = size + 2 + "pt";
 }
 
-function isVowel(x){
-    return  x == 'a' || x=='e' || x == 'i' || x=='o' || x == 'u';
+function isVowel(x) {
+    return x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u';
 }
 
 
