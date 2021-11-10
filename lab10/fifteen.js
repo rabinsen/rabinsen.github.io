@@ -1,37 +1,29 @@
-
+"use strict";
 var row = 3;
 var col = 3;
 const WIDTH = 100;
 const HEIGHT = 100;
+var isShuffle = false;
 $(document).ready(function () {
-
-  init = function () {
-    var puzzleArea = document.getElementById('puzzlearea');
-    var divs = puzzleArea.getElementsByTagName("div");
-
-    // initialize each piece
-    for (var i = 0; i < divs.length; i++) {
-      var div = divs[i];
-
-      // calculate x and y for this piece
-      var x = ((i % 4) * 100);
-      var y = (Math.floor(i / 4) * 100);
-
-      // set basic style and background
-      div.className = "puzzlepiece";
-      div.style.left = x + 'px';
-      div.style.top = y + 'px';
-      div.style.backgroundImage = 'url("background.jpg")';
-      div.style.backgroundPosition = -x + 'px ' + (-y) + 'px';
-
-      // store x and y for later
-      div.x = x;
-      div.y = y;
-    }
+  //<-- first initialize puzzle in background--->
+  var init = function () {
+    $("#puzzlearea div").each(function (i) {
+      var x = ((i % 4) * 100) ;
+      var y = (Math.floor(i / 4) * 100) ;
+      $(this).addClass("puzzlepiece");
+      $(this).css({
+        left: x + "px",
+        top: y + "px",
+        "background-image": "url(background.jpg)",
+        "background-position": -x + "px " + -y + "px",
+      });
+      $(this).x = x;
+      $(this).y = y;
+    });
   };
   init();
+
   //<!---- puzzle play -- ((hover and move )) --->
-  
   $("#puzzlearea div").hover(
     function () {
       $(this).addClass("movablepiece");
@@ -42,22 +34,33 @@ $(document).ready(function () {
   );
 
   $("#puzzlearea div").click(function () {
+    if(!isShuffle){
+      alert("Please shuffle to play");
+      return false;
+    }
     var div = $(this);
     var checkMov = isMovable(div);
     if (checkMov) {
       movePiece(div);
-    } else {
-      alert("Sorry, can't Move");
+    } else if(isShuffle){
+      alert("Error Move");
     }
   });
 
   // <!--Shuffle  Algorithim -->
   $("#shufflebutton").click(function () {
     init();
+    isShuffle = true;
+    $("#shufflebutton").off("click");
+    $("#shufflebutton").click(function(){
+      alert("Only one shuffle per game");
+      
+    })
     let originalUnshuffledArray = [
       0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
     ];
     let shuffledArray = shuffleArray(originalUnshuffledArray);
+    console.log(shuffledArray);
     $("#puzzlearea div").each(function (idx) {
       let newIdx = shuffledArray[idx];
       var xPos = function (num) {
@@ -88,6 +91,7 @@ $(document).ready(function () {
     var curElemPosition = div.position();
     var x = curElemPosition.left;
     var y = curElemPosition.top;
+    console.log(x + "x" + "y" + y);
     var tempX = x / 100;
     var tempY = y / 100;
     $(div).css({
@@ -145,7 +149,7 @@ $(document).ready(function () {
     let numElements = arr.length;
     let randDivIdx = Math.floor(Math.random() * numElements);
     var randDiv = $("#puzzlearea div")[randDivIdx];
-    
+    console.log("Empty area is: x => " + row + " and y => " + col);
     let randDivX = $(randDiv).position().left;
     let randDivY = $(randDiv).position().top;
     $(randDiv).css({
@@ -154,7 +158,6 @@ $(document).ready(function () {
     });
     row = randDivX / 100;
     col = randDivY / 100;
-    
+    console.log("Empty area is: x => " + row + " and y => " + col);
   };
 });
-
