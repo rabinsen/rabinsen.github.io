@@ -1,0 +1,14 @@
+html 
+    head 
+        title Quiz App 
+    body 
+        div.container
+            h1 The Number Quiz 
+            p Your score is 
+            p Guess the next number in the sequence 
+            p=data
+            
+            form(action="/checkAnswer" method="post")
+                label Your answer: 
+                input(type="text" name="answer")
+                input(type="submit")  
