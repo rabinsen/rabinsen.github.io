@@ -1,12 +1,14 @@
 html 
     head 
         title Quiz App 
+        style 
+            include style.css
     body 
         div.container
             h1 The Number Quiz 
             p Your score is 
             p Guess the next number in the sequence 
-            p=data
+            p=quesData
             
             form(action="/checkAnswer" method="post")
                 label Your answer: 

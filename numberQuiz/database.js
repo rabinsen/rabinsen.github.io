@@ -1,4 +1,4 @@
-questions = function(){
+data = function(){
     return [
         {"question" : [3, 1, 4, 1, 5], "ans" : 9},
         {"question" : [1, 1, 2, 3, 5], "ans" : 8},
@@ -7,5 +7,4 @@ questions = function(){
         {"question" : [1, 2, 4, 8, 16], "ans" : 32}
     ];
 }
-
-exports.questions = questions;
+exports.data = data;
