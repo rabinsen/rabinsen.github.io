@@ -10,7 +10,7 @@ app.set("view engine", "pug");
 
 app.get("/", (req, res) => {
     if (count < 5) {
-        res.render('home', { quesData: database.data()[count].question });
+        res.render('home', { quesData: database.data()[count].question, sc : score });
     } else {
         res.render('scorePage', { points: score, total: count });
     }
