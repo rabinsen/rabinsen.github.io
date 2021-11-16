@@ -1,0 +1,38 @@
+body {
+  background-color: rgb(189, 134, 16);
+}
+
+#header {
+  background-color: black;
+  height: 105px;
+  margin: -20px -50px 0px -10px;
+  color: white;
+}
+.content {
+  margin: 20px;
+  position: relative;
+  top: 35px;
+  left: 50px;
+}
+
+.content form {
+  font-size: 25px;
+}
+
+input{
+    height: 25px;
+}
+
+#search{
+    height: 32px;
+    width: 70px;
+}
+
+li {
+  margin: 20px;
+  position: relative;
+  top: 30px;
+  left: 50px;
+  list-style-type: none;
+  margin: 20px 0;
+}
