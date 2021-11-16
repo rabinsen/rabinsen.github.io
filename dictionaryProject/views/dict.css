@@ -5,7 +5,8 @@ body {
 #header {
   background-color: black;
   height: 105px;
-  margin: -20px -50px 0px -10px;
+  margin: -20px -30px 0px -10px;
+  
   color: white;
 }
 .content {
@@ -37,4 +38,12 @@ li {
   list-style-type: none;
   margin: 20px 0;
   font-size: 25px;
+}
+
+#footer{
+  height: 90px;
+  background-color: rgb(23, 71, 8);
+  position: absolute;
+  top: 420px;
+  margin: 0px -10px;
 }

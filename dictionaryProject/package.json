@@ -1,0 +1,15 @@
+{
+  "name": "dictionaryproject",
+  "version": "1.0.0",
+  "description": "Search word in the dictionary",
+  "main": "Dictionary.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "words",
+    "dictionary"
+  ],
+  "author": "Rabin Senchuri",
+  "license": "ISC"
+}
