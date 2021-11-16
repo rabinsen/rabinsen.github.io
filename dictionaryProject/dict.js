@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#search").click(function () {
         $w = $("#word").val();
-        $.ajax("http://localhost:3000/search", {
+        $.ajax("/search", {
             type: 'POST',
             data: { word: $w }
         })
