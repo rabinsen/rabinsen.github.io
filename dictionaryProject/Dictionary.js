@@ -13,9 +13,9 @@ app.use(express.static(path.join(__dirname)));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "dict.html"));
 })
- app.get("/dict.js", function (req, res) {
+ /* app.get("/dict.js", function (req, res) {
      res.sendFile(path.join(__dirname, "/dict.js"));
- });
+ }); */
 
 app.post('/search', function (req, res) {
     var con = mysql.createConnection({
